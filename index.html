@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="game-container" id="bodyId">
+        <h1 class="title fade">Save Hungy</h1>
+        <p class="description fade">Guess the Word to save Hungy</p>
+
+        <svg width="200" height="250" class="figure-container" id="figure">
+            <!-- Gallow -->
+            <line x1="60" y1="20" x2="140" y2="20"></line>
+            <line x1="140" y1="20" x2="140" y2="60"></line>
+            <line x1="60" x2="60" y1="20" y2="240"></line>
+            <line x1="10" y1="240" x2="110" y2="240"></line>
+            <!-- Hungy -->
+            <!-- Head -->
+            <circle class="body-part" cx="140" cy="80" r="20" />
+            <!-- Torso -->
+            <line class="body-part" x1='140' y1="100" x2="140" y2="150"></line>
+            <!-- Left Arm -->
+            <line class="body-part" x1="110" y1="120" x2="140" y2="120"></line>
+            <!-- Right Arm -->
+            <line class="body-part" x1="140" y1="120" x2="170" y2="120"></line>
+            <!-- Left Leg -->
+            <line class="body-part" x1="110" y1="180" x2="140" y2="150"></line>
+            <!-- Right Leg -->
+            <line class="body-part" x1="170" y1="180" x2="140" y2="150"></line>
+        </svg>
+
+        <div>
+            <p id="gameover"></p>
+        </div>
+
+        <!-- Wrong letter container -->
+        <div class="wrong-container">
+            <div id="wrong-letters" class="fade">
+            </div>
+        </div>
+
+        <div class="word fade" id="word">
+        </div>
+    </div>
+
+    <!-- Modal Popup for win/lose -->
+    <div class="modal-container" id="modal-container">
+        <div class="modal">
+            <h1 id="end-message">You LOSE</h1>
+            <button class="btn-play" id="btn-play">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Alert player if letter is already in play -->
+    <div class="alert-container" id="alert-container">
+        <p>This letter has already been played ;(</p>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
